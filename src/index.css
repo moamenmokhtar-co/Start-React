@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer utilities {
+  .container-custom {
+    @apply container mx-auto
+  }
+
+  .b-line {
+    @apply before:absolute before:start-0 before:top-1/2 before:h-1 before:w-[120px]
+  }
+
+  .a-line {
+    @apply after:absolute after:end-0 after:top-1/2 after:h-1 after:w-[120px]
+  }
+
+  .overlay {
+    @apply after:content-['+'] after:absolute after:inset-0 after:bg-secondry-color/85 after:rounded-xl after:flex after:justify-center after:items-center after:text-7xl after:font-bold after:text-white after:opacity-0 after:transition-opacity after:duration-300
+  }
+
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+
+.active {
+  background-color: #1ABC9C;
+}
+
+.active:hover {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.vh {
+  min-height: calc(100vh - 220px);
+}
+
+@media (max-width:768px) {
+  .vh {
+    min-height: calc(100vh - 168px);
+    
+  }
+}
+
+
+nav , #Navbar {
+  transition: all 1s;
+}
